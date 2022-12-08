@@ -1,0 +1,20 @@
+.div1 {
+    width: 200px;
+    height: 93.3vh;
+    margin-top: -200px;
+    border: 1px solid #2a2f3b;
+    background-color: #2a2f3b;
+  }
+
+.backgrou{
+    background-color: #2a2f3b;
+}
+
+.div2 {
+    width: 200px;
+    margin-left: 1298px;
+    height: 100vh;
+    margin-top: -800px;
+    border: 1px solid #2a2f3b;
+    background-color: #2a2f3b;
+  }

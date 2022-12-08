@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+.quote
+{
+    width: 72%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.quote .boxim
+{
+    position: fixed;
+    margin-top: -28%;
+    margin-left: -1%;
+    border-radius: 25px;
+    width: 25%;
+    height: 55%;
+    background: #fff;
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 30px;
+    box-shadow: -20px 50px 100px rgba(0,0,0,.5);
+    opacity: 0;
+    pointer-events:none;
+}
+
+.quote .boxvi
+{
+    position: fixed;
+    margin-top: -28%;
+    margin-left: -1%;
+    border-radius: 25px;
+    width: 25%;
+    height: 55%;
+    background: #fff;
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 30px;
+    box-shadow: -20px 50px 100px rgba(0,0,0,.5);
+    opacity: 0;
+    pointer-events:none;
+}
+
+/* .quote .box.box3:hover ~ .bg,
+.quote .box.box3:hover
+{
+    opacity: 1;
+    background: linear-gradient(#FFC107, #E91E63);
+}
+*/
+
+.quote .boxim p
+{
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    color: black;
+}
+
+.quote .boxvi p
+{
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    color: black;
+}
+
+.quote .boxim h2
+{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.quote .boxvi h2
+{
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.quote .boxim:after
+{
+    content: url("../images/info.png");
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    opacity: 0.1;
+    background: rgba(255,255,255,0.2);
+    pointer-events: none;
+}
+
+.quote .boxvi:after
+{
+    content: url("../images/info.png");
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    opacity: 0.1;
+    background: rgba(255,255,255,0.2);
+    pointer-events: none;
+
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.buttongambar{
+    color: white;
+    padding: 10px 25px;
+    background: black;
+    border: 2px solid #110f1d;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    position: fixed;
+    transition: color 0.4s linear;
+    left: 30%;
+    bottom: 17%;
+  }
+  
+  .buttongambar:hover{
+    color: white;
+    background-color: #110f1d;
+    border: 2px solid #920823;
+    text-decoration: none;
+  }
+  
+  .buttonvideo{
+    color: #110f1d;
+    padding: 10px 25px;
+    background: #fbfcfb;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    transition: color 0.4s linear;
+    position: fixed;
+    right: 30%;
+    bottom: 17%;
+  }
+  
+  .buttonvideo:hover{
+    color: #fbfcfb;
+    background-color: #920823;
+    border: 2px solid #110f1d;
+    text-decoration: none;
+  }
+  
+  .buttonchange::before{
+    content: "";
+    z-index: -1;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transform: scaleX(0) ;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+  }
+
+  .hyde:hover .boxim
+  {
+    opacity: 1;
+  }
+
+  .hyde2:hover .boxvi
+  {
+    opacity: 1;
+  }

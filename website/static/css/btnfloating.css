@@ -1,0 +1,66 @@
+
+.btn-floatingSVT{
+  position: fixed;
+  border-radius: 100px;
+  border: 0px;
+  bottom: 68%;
+  right: 50px;
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  transition: .2s;
+  z-index: 999;
+  }
+
+.btn-floatingDVT{
+  position: fixed;
+  border-radius: 100px;
+  border: 0px;
+  bottom: 54%;
+  right: 50px;
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  transition: .2s;
+  z-index: 999;
+}
+
+
+.btn-floatingPE{
+  position: fixed;
+  border-radius: 100px;
+  border: 0px;
+  bottom: 40%;
+  right: 50px;
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  transition: .2s;
+  z-index: 999;
+  }
+  
+.btn-floating:hover{
+    width: auto;
+    padding: 0 20px;
+    cursor: pointer;
+  }
+
+.btn-floating span{
+    font-size: 16px;
+    color: blue;
+    margin-left: 0px;
+    transition: .2s;
+    line-height: 0 10px;
+    display: none; 
+  }
+
+.btn-floating:hover span{
+    display: inline-block;
+  }
+
+.buttonbg{
+    padding: 1px 8px 8px 4px;  
+    background: white;
+    background-position: 8px 8px;
+    background-repeat: no-repeat;
+}

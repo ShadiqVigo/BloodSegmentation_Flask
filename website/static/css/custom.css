@@ -1,0 +1,75 @@
+
+
+.bg-custom { 
+  background: url("../images/background2.jpg") no-repeat center center fixed; 
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-custom3 {
+  background-image: url("../images/background2.jpg");
+  /* background-color: #cccccc; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: 100%;
+  background-attachment: fixed;
+
+}
+
+.bg-custom2{
+  /* background: #1b1b1b; */
+  background: #C0C0C0;
+}
+
+.darahicon img{
+  width: 70%;
+}
+
+.darahicon{
+    animation: naikturun 2s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25%;
+    width: 50%;
+    height: 70%;
+}
+
+@keyframes naikturun {
+  0%{
+    transform: translateY(0);
+  } 
+
+  50%{
+    transform: translateY(-5vh);
+  }
+
+  100%{
+    transform: translateY(0)
+  }
+
+}
+
+nav .logo{
+  float: left;
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 50px;
+  padding-left: 60px;
+}
+
+nav .logo{
+  padding-left: 30px;
+  width: 100%;
+}
+
+.box{
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  background-color: 1b1b1b;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
