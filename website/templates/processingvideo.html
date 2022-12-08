@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Upload Vein</title>
+    <link href="../static/css/indexvid.css" rel="stylesheet"/>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="../static/css/all.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  </head>
+
+
+  <body>
+    
+    <nav>
+      <div class="logo">BloodSegmentation</div>
+      <label for="btn" class="icon">
+        <span class="fa fa-bars"></span>
+      </label>
+      <input type="checkbox" id="btn">
+      <ul>
+        <li><a href="/">Home</a></li>
+      </ul>
+    </nav>
+    <div class="content">
+      <header>Video Have Been Converted!</header>
+      <p>Convert Video to Image Frame by Frame.
+      </p>
+
+      <div>
+        <a href="{{ url_for('.download_video') }}">
+          <button class="bbtn" style="color:white;font-size:18px;"> Download </button>
+        </a>
+      </div>
+    </div>
+
+
+    <script>
+      $('.icon').click(function(){
+        $('span').toggleClass("cancel");
+      });
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Upload Vein</title>
+    <link href="../static/css/indexvid.css" rel="stylesheet"/>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="../static/css/all.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  </head>
+
+
+  <body>
+    
+    <nav>
+      <div class="logo">BloodSegmentation</div>
+      <label for="btn" class="icon">
+        <span class="fa fa-bars"></span>
+      </label>
+      <input type="checkbox" id="btn">
+      <ul>
+        <li><a href="/">Home</a></li>
+      </ul>
+    </nav>
+    <div class="content">
+      <header>Extract Images from Video</header>
+      <p>Convert Video to Image Frame by Frame. Accepted Video are mp4 and avi.
+      </p>
+
+      <form id="upload-form" action="{{ url_for('auth.upload3') }}" method="POST" enctype="multipart/form-data">
+        <input id="file-picker" type="file" name="file" accept="video/*" class="hidden" onchange="this.form.submit()">
+        <label for="file-picker" class="bbtn" style="color:white;font-size:18px;">Select Video File</label>
+      </form>
+    </div>
+
+    <div class="content2">
+      <img src="../static/images/tutorvid2.png">
+    </div>
+
+
+
+
+    <script>
+      $('.icon').click(function(){
+        $('span').toggleClass("cancel");
+      });
+    </script>
+
+  </body>
+</html>

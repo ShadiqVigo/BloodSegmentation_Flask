@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Upload Vein</title>
+    <link href="../static/css/index.css" rel="stylesheet"/>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="../static/css/all.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  </head>
+
+
+  <body class="bg-custom">
+
+    <nav>
+      <div class="logo">Thrombus Segmentation</div>
+      <label for="btn" class="icon">
+        <span class="fa fa-bars"></span>
+      </label>
+      <input type="checkbox" id="btn">
+      <ul>
+        <li><a href="/EditImage">Crop Image</a></li>
+        <li>
+          <label for="btn-1" class="show">Segmentation</label>
+          <a href="#">Select Segmentation</a>
+          <input type="checkbox" id="btn-1">
+          <ul>
+            <li><a href="#">Vein</a></li>
+            <li><a href="/UploadImage2">Thrombus</a></li>
+          </ul>
+        </li>
+        <li><a href="/UploadVideo">Upload Video</a></li>
+        <li>
+          <label for="btn-2" class="show">Downlaod</label>
+          <a href="#">Download</a>
+          <input type="checkbox" id="btn-2">
+          <ul>
+            <li>
+              <label for="btn-3" class="show">Help</label>
+              <a href="/test">Help <span class="fa fa-plus"></span></a>
+              <input type="checkbox" id="btn-3">
+              <ul>
+                <li><a href="#">Latest</a></li>
+                <li><a href="#">Processed</a></li>
+                <li><a href="#">Item</a></li>
+              </ul>
+            </li>
+            <li><a href="{{ url_for('.download_file') }}">Photo</a></li>
+            <li><a href="{{ url_for('.download_video') }}">Video</a></li>
+          </ul>
+        </li>
+        <li><a href="/">Home</a></li>
+      </ul>
+    </nav>
+    <div class="content">
+      <header>Vein Segmentation</header>
+      <!-- <h2>*For Thrombus Segmentation use "Select Segmentation" menu above.</h2> -->
+      <p>Segmentation uses a deep learning method, namely U-Net. The application is able to be used to segment the area of vein in the interactive manner.
+      </p>
+
+      <form id="upload-form" action="{{ url_for('auth.upload') }}" method="POST" enctype="multipart/form-data">
+        <input id="file-picker" type="file" name="file" accept="image/*" class="hidden" onchange="this.form.submit()">
+        <label for="file-picker" class="bbtn">Select Image</label>
+      </form>
+    </div>
+
+    <div class="content2">
+      <p>The uploaded image is a zoomed image of blood vessels on an ultrasound image.
+      </p>
+      <img src="../static/images/tutorvein2.png">
+    </div>
+
+
+
+
+    <script>
+      $('.icon').click(function(){
+        $('span').toggleClass("cancel");
+      });
+    </script>
+
+  </body>
+</html>

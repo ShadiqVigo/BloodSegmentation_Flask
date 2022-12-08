@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Images</title>
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Cropper CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../static/css/editor.css" />
+    <link href="../static/css/index.css" rel="stylesheet"/>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="../static/css/all.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+
+    <nav>
+      <div class="logo">BloodSegmentation</div>
+      <label for="btn" class="icon">
+        <span class="fa fa-bars"></span>
+      </label>
+      <input type="checkbox" id="btn">
+      <ul>
+        <li><a href="/UploadImage">Segment</a></li>
+        <li><a href="/">Home</a></li>
+      </ul>
+    </nav>
+    <script>
+      $('.icon').click(function(){
+        $('span').toggleClass("cancel");
+      });
+    </script>
+
+
+    <div class="wrapper">
+      <div class="editor-container">
+        <div class="image-container">
+          <img id="image" />
+        </div>
+        <input type="file" id="file" accept="image/*" />
+        <label for="file">Upload Image</label>
+        <div class="options-btn hide">
+          <button id="rotate-left">
+            <img src="../static/images/rotate-left.png" />
+          </button>
+          <button id="rotate-right">
+            <img src="../static/images/rotate-right.png" />
+          </button>
+          <button id="scale-X-button">
+            <img src="../static/images/flip-hori.png" />
+          </button>
+          <button id="scale-Y-button">
+            <img src="../static/images/flip-ver.png" />
+          </button>
+          <button> <a href="/UploadImage">S</a> </button>
+          <button> <a href="/">H</a> </button>
+          
+        </div>
+        <div class="action-btns">
+          <button id="preview" class="hide">Preview</button>
+          <a href="" id="download" class="hide">Download</a>
+        </div>
+      </div>
+      <div class="preview-container">
+        <img id="preview-image" />
+      </div>
+    </div>
+    <!-- Script -->
+    <script src="../static/javascr/editor.js"></script>
+  </body>
+</html>

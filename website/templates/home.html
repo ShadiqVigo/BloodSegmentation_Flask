@@ -1,0 +1,66 @@
+<link href="../static/css/btnfloating.css" rel="stylesheet"/>
+<link href="../static/css/homekanan.css" rel="stylesheet"/>
+<link href="../static/css/homehover.css" rel="stylesheet">
+
+{% extends 'base.html' %} {% block title %}Home Page{% endblock %}
+
+
+{% block content%}
+
+<div class="svtcont"
+  id="massage">   
+    <h1> </h1>
+    <p> </p>
+</div>
+
+<div class="darahicon">
+    <img
+    id="myImage"
+    src="/static/images/darahicon.png">
+  </div>
+
+  <div class="quote">
+
+    <div class="hyde">
+        <div class="boxim">
+                <p>Upload image for segmentation of vascular vein and blood clot.
+                  <br><br> The uploaded image is a blood vessel recording image from an ultrasound image.
+                  <br><br>Image extensions for segmentation are .jpg, .png, .bmp and .jpeg.
+                </p>
+                <h2>Upload Image</h2>
+        </div>
+        <div>
+          <a href="/UploadImage">
+            <button class="buttongambar buttonchange oppa"> Upload Images </button>
+          </a>
+        </div>
+    </div>
+
+    
+    <div class="hyde2">
+        <div class="boxvi">
+                <p>Upload a video to convert it into multiple images frame by frame.</p>
+                <h2>Upload Video</h2>
+        </div>
+        <a href="/UploadVideo"
+          <button class="buttonvideo buttonchange"> Upload Video </button>
+        </a>
+    </div>
+  </div>
+
+<button class="btn-floatingSVT btn-floating buttonbg" onclick=pee();>
+    <image src = "/static/images/lungiconsm.png">
+      <span> Pulmonary Embolism </span>
+  </button>
+
+<button class="btn-floatingDVT btn-floating buttonbg" onclick=dvtee();>
+    <image src = "/static/images/kakiconsm.png"> 
+      <span> Deep Vein Thrombosis </span>
+</button>
+
+<button class="btn-floatingPE btn-floating buttonbg " onclick=svte();>
+    <image src = "/static/images/hearticonsm.png">
+    <span> Superficial Venous Thrombosis </span>
+</button>
+
+{% endblock %}

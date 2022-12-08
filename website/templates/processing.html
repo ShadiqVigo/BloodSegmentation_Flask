@@ -1,0 +1,73 @@
+<link href="../static/css/jumbotron-narrow.css" rel="stylesheet"/>
+<link href="../static/css/style.css" rel="stylesheet"/>
+
+<!DOCTYPE html>
+<html lang="en">
+ 
+
+<meta http-equiv="pragma" content="no-cache" />
+ 
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="-1" />
+
+<head>
+    <title>Process your image</title>
+ 
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+ 
+    <link href="../static/jumbotron-narrow.css" rel="stylesheet">
+
+    <link href="../static/style.css" rel="stylesheet">
+    
+    <link href="../static/css/index.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+</head>
+ 
+<body class = "back1 boxtu">
+
+    <nav>
+        <div class="logo">Preview Image</div>
+        <label for="btn" class="icon">
+          <span class="fa fa-bars"></span>
+        </label>
+        <input type="checkbox" id="btn">
+        <ul>
+          <li><a href="/UploadImage">Upload Again</a></li>
+          <li><a href="/">Home</a></li>
+        </ul>
+    </nav>
+
+      <script>
+        $('.icon').click(function(){
+          $('span').toggleClass("cancel");
+        });
+      </script>
+ 
+    <div class="container">
+ 
+        <div class="row marketing">
+            
+            <div class="col-lg-6">
+                <form id="form-Predict" action="{{ url_for('auth.Predict') }}" method="POST" enctype="multipart/form-data">        
+                  <button id="btnPredictV" class="btn btn-lg btn-success btn2" type="submit" name="mode" value="Predict">Predict</button>
+                  	  <input type="text" class="hidden" name="image" value="{{ image_name }}">  
+
+                </form>
+
+            <h4 style="color:#1b1b1b">Click on predict to Run the model</h4>
+            </div>
+        </div>
+
+        <div class="jumbotron">
+		 <div id="image-container">
+            <img src=" {{url_for('auth.send_image', filename=image_name)}} " style="max-width: 560px;">
+            </div>
+        </div>
+ 
+    </div>
+</body>
+ 
+</html>
+

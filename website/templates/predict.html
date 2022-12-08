@@ -1,0 +1,67 @@
+<link href="../static/css/result.css" rel="stylesheet"/>
+
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="pragma" content="no-cache" />
+ 
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="-1" />
+
+<head>
+    <title>Predicted Image</title>
+    <link href="../static/css/index.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+</head>
+ 
+<body class = "back1 boxtu">  
+    <nav>
+        <div class="logo">BloodSegmentation</div>
+        <label for="btn" class="icon">
+          <span class="fa fa-bars"></span>
+        </label>
+        <input type="checkbox" id="btn">
+        <ul>
+          <li><a href="/UploadImage">Upload Again</a></li>
+          <li><a href="/">Home</a></li>
+        </ul>
+    </nav>
+
+      <script>
+        $('.icon').click(function(){
+          $('span').toggleClass("cancel");
+        });
+      </script>
+ 
+      <div class="container">
+					
+        <div class="card">
+          <div class="imgBx">
+            <a href="{{ url_for('.download_file') }}">
+              <img src="static/upload/temp1.png?modified=<? filemtime("static/upload/temp1.png")?">
+            </a>
+          
+            <h2 style="color:white">Segmentation Result</h2>
+            <p style="color:white"><br>Segmented Image
+            </p>
+            
+          </div>
+        </div>
+      
+        <div class="card">
+          <div class="imgBx">
+            <a href="{{ url_for('.download_original') }}">
+              <img src="{{url_for('auth.send_image', filename=image_name)}} " style="max-width: 560px;">
+            </a>
+            <h2 style="color:white">Original image</h2>
+            <p style="color:white"><br>*Click on Image to Download
+            </p>					
+  
+          </div>	
+        </div>
+      </div>
+</body>
+ 
+</html>
+
